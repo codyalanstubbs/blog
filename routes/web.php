@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
+use App\Http\Controllers\AngularController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,9 @@ use App\Models\User;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//  For using angular
+//  Route::any('/{any}', [AngularController::class, 'index'])->where('any', '^(?!api).*$');
 
 Route::get('/', function () {
     return view('posts', [
