@@ -4,19 +4,19 @@
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
-    section#blog-posts {
+    section#blog-posts,
+    section#post {
         padding: 60/16em 0;
         padding-bottom: 100/16em;
         color: #fff;
         background-color: #000;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 0;
-
         width: 100%;
+
         article {
             width: 100%;
             margin: auto;
@@ -59,14 +59,113 @@
                 }
             }
 
+            .details {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
             .post-text {
                 margin-top: 24/16em;
             }
         }
+    }
+
+    section#blog-posts {
+        .options {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: #530092;
+            border-radius: 5px;
+            margin-top: 2px;
+            z-index: 12;
+
+            // Make dropdown scrollable for long lists
+            max-height: 100px;
+            overflow: auto;
+
+            a {
+                font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                font-size: 16/16em;
+                text-align: left;
+                color: #fff;
+                padding: 3px 15px;
+                width: 130px;
+
+                &:hover,
+                &:focus {
+                    background-color: #2c004e;
+                }
+
+                &:last-of-type {
+                    &:hover,
+                    &:focus {
+                        background-color: #2c004e;
+                        border-radius: 0 0 5px 5px;
+                    }
+                }
+            }
+        }
+
+        .categories-selector {
+            font-size: 16/16em;
+            font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            appearance: none;
+            position: relative;
+            border: none;
+            color: white;
+            background-color: #530092;
+            text-align: left;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: 130px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                margin-left: 5/16em;
+                fill: #fff;
+            }
+        }
+    }
+
+    section#post {
+        padding-top: 150/16em;
+
+        article {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+            position: relative;
+            font-size: 36/16em;
+            line-height: 36/36em;
+            text-align: left;
+            color: var(--primary);
+
+            a {
+                font-size: 20/20em;
+                line-height: 14/16em;
+                color: var(--primary);
+            }
+        }
 
         .back-to-posts {
+            font-size: 16/16em;
+            width: 500/16em;
+            text-align: left;
             color: #00bbff;
-            margin-top: 40/16em;
+            margin: auto;
+            margin-bottom: 10/16em;
+            padding-left: 10/16em;
         }
     }
 }

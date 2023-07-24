@@ -3,7 +3,8 @@
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0em) {
-  section#blog-posts {
+  section#blog-posts,
+  section#post {
     padding: 3.75em 0;
     padding-bottom: 6.25em;
     color: #fff;
@@ -15,7 +16,8 @@
     margin: 0;
     width: 100%;
   }
-  section#blog-posts article {
+  section#blog-posts article,
+  section#post article {
     width: 100%;
     margin: auto;
     margin-top: 2.5em;
@@ -25,7 +27,8 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  section#blog-posts article h2 {
+  section#blog-posts article h2,
+  section#post article h2 {
     font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
     font-size: 1.25em;
     position: relative;
@@ -33,30 +36,117 @@
     color: var(--primary);
     line-height: 0.875em;
   }
-  section#blog-posts article h2 a {
+  section#blog-posts article h2 a,
+  section#post article h2 a {
     font-size: 1em;
     line-height: 0.875em;
     color: var(--primary);
   }
-  section#blog-posts article p {
+  section#blog-posts article p,
+  section#post article p {
     color: #fff;
     font-size: 1.125em;
     line-height: 1em;
     text-align: left;
     margin-top: 0.25em;
   }
-  section#blog-posts article p:first-of-type {
+  section#blog-posts article p:first-of-type,
+  section#post article p:first-of-type {
     margin-top: 0.5em;
   }
-  section#blog-posts article p a {
+  section#blog-posts article p a,
+  section#post article p a {
     font-size: 1em;
     color: #00bbff;
   }
-  section#blog-posts article .post-text {
+  section#blog-posts article .details,
+  section#post article .details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section#blog-posts article .post-text,
+  section#post article .post-text {
     margin-top: 1.5em;
   }
-  section#blog-posts .back-to-posts {
+  section#blog-posts .options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #530092;
+    border-radius: 5px;
+    margin-top: 2px;
+    z-index: 12;
+    max-height: 100px;
+    overflow: auto;
+  }
+  section#blog-posts .options a {
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: left;
+    color: #fff;
+    padding: 3px 15px;
+    width: 130px;
+  }
+  section#blog-posts .options a:hover,
+  section#blog-posts .options a:focus {
+    background-color: #2c004e;
+  }
+  section#blog-posts .options a:last-of-type:hover,
+  section#blog-posts .options a:last-of-type:focus {
+    background-color: #2c004e;
+    border-radius: 0 0 5px 5px;
+  }
+  section#blog-posts .categories-selector {
+    font-size: 1em;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    appearance: none;
+    position: relative;
+    border: none;
+    color: white;
+    background-color: #530092;
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 130px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section#blog-posts .categories-selector svg {
+    margin-left: 0.3125em;
+    fill: #fff;
+  }
+  section#post {
+    padding-top: 9.375em;
+  }
+  section#post article {
+    margin-top: 0;
+  }
+  section#post h1 {
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 2.25em;
+    line-height: 1em;
+    text-align: left;
+    color: var(--primary);
+  }
+  section#post h1 a {
+    font-size: 1em;
+    line-height: 0.875em;
+    color: var(--primary);
+  }
+  section#post .back-to-posts {
+    font-size: 1em;
+    width: 31.25em;
+    text-align: left;
     color: #00bbff;
-    margin-top: 2.5em;
+    margin: auto;
+    margin-bottom: 0.625em;
+    padding-left: 0.625em;
   }
 }
