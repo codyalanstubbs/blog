@@ -5,6 +5,7 @@
 @media only screen and (min-width: 0em) {
   section#blog-posts {
     padding: 3.75em 0;
+    padding-bottom: 6.25em;
     color: #fff;
     background-color: #000;
     display: flex;
