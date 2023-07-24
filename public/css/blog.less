@@ -1,0 +1,71 @@
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    section#blog-posts {
+        padding: 60/16em 0;
+        color: #fff;
+        background-color: #000;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        width: 100%;
+        article {
+            width: 100%;
+            margin: auto;
+            margin-top: 40/16em;
+            padding-left: 10/16em;
+            max-width: 500/16em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h2 {
+                font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+                font-size: 20/16em;
+                position: relative;
+                text-align: left;
+                color: var(--primary);
+
+                line-height: 14/16em;
+                a {
+                    font-size: 20/20em;
+                    line-height: 14/16em;
+                    color: var(--primary);
+                }
+            }
+
+            p {
+                color: #fff;
+                font-size: 18/16em;
+                line-height: 18/18em;
+                text-align: left;
+                margin-top: 4/16em;
+
+                &:first-of-type {
+                    margin-top: 8/16em;
+                }
+
+                a {
+                    font-size: 18/18em;
+                    color: #00bbff;
+                }
+            }
+
+            .post-text {
+                margin-top: 24/16em;
+            }
+        }
+
+        .back-to-posts {
+            color: #00bbff;
+            margin-top: 40/16em;
+        }
+    }
+}
