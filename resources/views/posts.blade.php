@@ -10,33 +10,42 @@
     </section>
     <section id="blog-posts">
 
-        <x-dropdown>
 
-            <x-slot name="trigger">
-                <button class="categories-selector">
-                    {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories' }}
-                    <x-icon name="down-arrow"></x-icon>
-                </button>
-            </x-slot>
+        <div class="filters">
+            <x-dropdown>
+                <x-slot name="trigger">
+                    <button class="categories-selector">
+                        {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories' }}
+                        <x-icon name="down-arrow"></x-icon>
+                    </button>
+                </x-slot>
 
-            <x-dropdown-item href="/">All</x-dropdown-item>
+                <x-dropdown-item href="/">All</x-dropdown-item>
 
-            @foreach ($categories as $category)
-                @if (isset($currentCategory))
-                    @if ($currentCategory->name === $category->name)
-                        <!-- If there is a category selected, then do not show as an option-->
+                @foreach ($categories as $category)
+                    @if (isset($currentCategory))
+                        @if ($currentCategory->name === $category->name)
+                            <!-- If there is a category selected, then do not show as an option-->
+                        @else
+                            <x-dropdown-item href="/categories/{{ $category->slug }}">
+                                {{ ucwords($category->name) }}
+                            </x-dropdown-item>
+                        @endif
                     @else
                         <x-dropdown-item href="/categories/{{ $category->slug }}">
                             {{ ucwords($category->name) }}
                         </x-dropdown-item>
                     @endif
-                @else
-                    <x-dropdown-item href="/categories/{{ $category->slug }}">
-                        {{ ucwords($category->name) }}
-                    </x-dropdown-item>
-                @endif
-            @endforeach
-        </x-dropdown>
+                @endforeach
+            </x-dropdown>
+
+            <div>
+                <form action="#" method="get">
+                    <input class="search" type="text" name="search" placeholder="Search posts">
+                </form>
+            </div>
+        </div>
+
 
 
         @if ($posts->count())

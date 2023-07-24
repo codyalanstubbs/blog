@@ -73,6 +73,48 @@
     }
 
     section#blog-posts {
+        div.filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10/16em;
+            width: 100%;
+            max-width: 500/16em;
+
+            input.search {
+                font-size: 16/16em;
+                font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                appearance: none;
+                position: relative;
+                border: none;
+                color: #000;
+                background-color: var(--primary);
+                text-align: left;
+                padding: 10px 15px;
+                border-radius: 5px;
+                width: 200px;
+                box-sizing: border-box;
+                margin-left: 10px;
+
+                ::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: #0f0f0f;
+                    opacity: 1; /* Firefox */
+                }
+
+                :-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #0f0f0f;
+                }
+
+                ::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: #0f0f0f;
+                }
+            }
+        }
+
         .options {
             position: absolute;
             display: flex;

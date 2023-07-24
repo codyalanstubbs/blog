@@ -70,6 +70,44 @@
   section#post article .post-text {
     margin-top: 1.5em;
   }
+  section#blog-posts div.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.625em;
+    width: 100%;
+    max-width: 31.25em;
+  }
+  section#blog-posts div.filters input.search {
+    font-size: 1em;
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    appearance: none;
+    position: relative;
+    border: none;
+    color: #000;
+    background-color: var(--primary);
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+    margin-left: 10px;
+  }
+  section#blog-posts div.filters input.search ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0f0f0f;
+    opacity: 1;
+    /* Firefox */
+  }
+  section#blog-posts div.filters input.search :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #0f0f0f;
+  }
+  section#blog-posts div.filters input.search ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #0f0f0f;
+  }
   section#blog-posts .options {
     position: absolute;
     display: flex;
