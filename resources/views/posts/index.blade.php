@@ -15,7 +15,11 @@
             <x-category-dropdown />
             <div>
                 <form action="#" method="get">
-                    <input class="search" type="text" name="search" placeholder="Search posts">
+                    @if (request('category'))
+                        <input type="hidden" name="category" value="{{ request('category') }}">
+                    @endif
+                    <input class="search" type="text" name="search" placeholder="Search posts"
+                        value="{{ request('search') }}">
                 </form>
             </div>
         </div>

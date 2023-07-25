@@ -13,7 +13,8 @@
             @if ($currentCategory->name === $category->name)
                 <!-- If there is a category selected, then do not show as an option-->
             @else
-                <x-dropdown-item href="/?category={{ $category->slug }}">
+                <x-dropdown-item
+                    href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category')) }}">
                     {{ ucwords($category->name) }}
                 </x-dropdown-item>
             @endif
