@@ -33,7 +33,7 @@
                     <div class="details">
                         <p>
                             By
-                            <a href="authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in
+                            <a href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a> in
                             <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>,
                             <span class="post-date">
                                 Posted {{ $post->created_at->diffForHumans() }}
