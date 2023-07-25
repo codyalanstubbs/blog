@@ -69,7 +69,9 @@
                 </article>
             @endforeach
         @else
-            <h2>No posts yet. Please check back later.</h2>
+            <article class="content">
+                <h2>No posts found.</h2>
+            </article>
         @endif
     </section>
 </x-layout>
